@@ -13,4 +13,4 @@ def generate_buzz():
     return render_template('index.html', buzz=buzz)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=os.getenv('PORT'), template_folder='templates')
+    app.run(host='0.0.0.0', port=os.getenv('PORT'))
