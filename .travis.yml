@@ -12,4 +12,4 @@ script:
 
 after_success:
   - sh .travis/deploy_dockerhub.sh
-  - test “cicd-buzz” = “master” && sh .travis/deploy_heroku.sh
+  - test "$TRAVIS_BRANCH" = "master" && sh .travis/deploy_heroku.sh
