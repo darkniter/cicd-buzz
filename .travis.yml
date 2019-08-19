@@ -11,5 +11,5 @@ script:
   - python -m pytest -v
 
 after_success:
-  — sh .travis/deploy_dockerhub.sh
-  — sh .travis/deploy_heroku.sh
+  - sh .travis/deploy_dockerhub.sh
+  - test “cicd-buzz” = “master” && sh .travis/deploy_heroku.sh
